@@ -1,0 +1,58 @@
+{
+  "name": "eslint-config",
+  "version": "0.12.1",
+  "description": "ESLint Sharable Configurations",
+  "main": "src/eslintrc.js",
+  "scripts": {
+    "dist": "echo dist",
+    "pack": "npm pack",
+    "lint": "eslint src/**/*.js",
+    "test:pack": "bash -x scripts/npm-pack-testing.sh",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "blue-tape -r ts-node/register 'src/**/*.spec.ts' 'src/*.spec.ts' 'tests/*.spec.ts' 'tests/**/*.spec.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jingbo925/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintConfig"
+  ],
+  "author": {
+    "name": "jingbo",
+    "email": "jingbo925@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jingbo925/eslint-config/issues"
+  },
+  "homepage": "https://github.com/jingbo925/eslint-config#readme",
+  "peerDependencies": {},
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "@wwwouter/tslint-contrib": "^1.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^16.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "file-name-linter": "^1.1.0",
+    "markdownlint-cli": "^0.26.0",
+    "pkg-up": "^3.1.0",
+    "tslint": "^6.1.2",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.0",
+    "@types/glob": "^7.1.2",
+    "glob": "^7.1.6",
+    "ts-node": "^9.1.1",
+    "tstest": "^0.4.10"
+  }
+}
